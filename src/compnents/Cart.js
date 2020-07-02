@@ -29,18 +29,20 @@ const Cart = (props) => {
     return (
         <React.Fragment>
             <Container>
-                <h3>Order Summery</h3>
+                <h3 className="odr-smry">Order Summery</h3>
                 {Object.keys(cartItems).length > 0 ?
                     <Row>
-                        <Col>
+                        <Col md={6} className="odrDtls-wrapper">
                             <OrderDetails />
                         </Col>
-                        <Col>
+                        <Col md={6}>
                             <OrderForm confirmOrder={confirmOrder} />
                         </Col>
                     </Row> :
                     <p>You didn't added any ingredients in your salad!</p>}
+                    <Row className="bck-btn">
                 <Button onClick={handleBack}>Back To Ingredients</Button>
+                </Row>
             </Container>
             <ConfirmationModal handleCloseModal={handleCloseModal} />
         </React.Fragment>

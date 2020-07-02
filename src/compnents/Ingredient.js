@@ -14,7 +14,8 @@ const Ingredient = (props) => {
     }
 
     return (
-        <Container style={{ width: "fit-conten", margin: "auto", justifyContent: "center", textAlign: "center", border: "solid grey", padding: "5px 0px" }}>
+       
+        <Col className="col-md-3 ingrdnt-col">
             <Row>
                 <Col>
                     <h6>{props.ingredient.name}</h6>
@@ -24,9 +25,6 @@ const Ingredient = (props) => {
                 <Col>
                     <p>{`Price : ₹ ${props.ingredient.price}`}</p>
                 </Col>
-                <Col>
-                    <p>{`Added Qnty: ${props.addedIngredientList[props.ingredient.name] ? props.addedIngredientList[props.ingredient.name].quantity : 0}`}</p>
-                </Col>
             </Row>
             <Row>
                 <Col>
@@ -35,7 +33,7 @@ const Ingredient = (props) => {
                         <CustomButton ingredient={props.ingredient} />}
                 </Col>
             </Row>
-        </Container>
+        </Col>
     )
 }
 const mapStateToProps = state => ({

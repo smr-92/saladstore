@@ -8,7 +8,8 @@ const Home = () => {
         history.push('/ingredients')
     }
     return (
-        <Container style={{ margin:"auto", textAlign:"center"}}>
+        <Container className="home-ctnr">
+            <br/>
             <Row>
                 <Col>
                     <h4>Welcome to salad store</h4>

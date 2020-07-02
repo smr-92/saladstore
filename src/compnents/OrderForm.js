@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Col } from 'react-bootstrap';
 
 const OrderForm = (props) => {
     const [name, setName] = useState("");
@@ -15,12 +15,14 @@ const OrderForm = (props) => {
     
         setValidated(true);
         event.preventDefault();
-        let customerData = {
-            name:name,
-            email:email,
-            request:rqst
+        if (form.checkValidity() === true) {
+            let customerData = {
+                name:name,
+                email:email,
+                request:rqst
+            }
+            props.confirmOrder(customerData)
         }
-        props.confirmOrder(customerData)
       };
 
     const handleEmail = (e) => {
@@ -33,8 +35,7 @@ const OrderForm = (props) => {
         setRqst(e.target.value)
     }
     return (
-        <Form noValidate validated={validated} onSubmit={handleSubmit}
-        style={{width:"50%", margin:"auto", justifyContent:"center"}}> 
+        <Form noValidate validated={validated} onSubmit={handleSubmit} className="order-form"> 
             <Form.Group >
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" 
@@ -59,9 +60,11 @@ const OrderForm = (props) => {
                 <Form.Control as="textarea" rows="2" 
                 value={rqst} onChange={handleRqst}/>
             </Form.Group>
-            <Button variant="primary" type="submit">
-                Order
-            </Button>
+            <Col className="form-btn">
+                <Button variant="primary" type="submit">
+                    Order
+                </Button>
+            </Col>
         </Form>
     )
 }

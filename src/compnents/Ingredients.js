@@ -11,7 +11,7 @@ const Ingredients = (props) => {
     useEffect(()=>{props.getAllIngredient()});
 
     const history = useHistory();
-    
+
     const handleProceed = () =>{
         history.push('/orderdetails')
     }
@@ -24,7 +24,7 @@ const Ingredients = (props) => {
                     )
                 })}
             </ul>
-            <Button onClick={handleProceed}>PROCEED TO CHECKOUT</Button>
+            <Button className="proceed-btn" onClick={handleProceed}>PROCEED TO CHECKOUT</Button>
         </Container>
     )
 }

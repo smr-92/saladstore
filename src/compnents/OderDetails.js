@@ -12,15 +12,15 @@ const OderDetails = (props) => {
     }
     return (
         <React.Fragment>
-            <ul style={{ width: "80%" }}>
+            <ul style={{padding:"15px"}}>
                 {Object.keys(cartItems).map((item) => {
                     return (
-                        <div key={item}>
+                        <div key={item} style={{padding: "0 15px"}}>
                             <Row>
                                 <h6>{item}</h6>
                             </Row>
                             <Row>
-                                <Col>
+                                <Col style={{padding:"0px"}}>
                                     <p>{`Qnty: ${cartItems[item].quantity}`}</p>
                                 </Col>
                                 <Col>
@@ -34,8 +34,7 @@ const OderDetails = (props) => {
                     )
                 })}
             </ul>
-            <p>--------------------------------------------------</p>
-            <h4>{`Total Order Amount: ${getTotalAmmont()}`}</h4>
+            <h4 className="total-ammount">{`Total Order Amount: ${getTotalAmmont()}`}</h4>
         </React.Fragment>
     )
 }
