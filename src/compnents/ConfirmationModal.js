@@ -17,7 +17,7 @@ const ConfirmationModal = (props) => {
             keyboard={false}
         >
             <Modal.Header closeButton>
-                <Modal.Title>{`Thank you for shopping with us`}</Modal.Title>
+                <Modal.Title>{`Thank you for shopping with us. Delivery is on its way`}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Container>

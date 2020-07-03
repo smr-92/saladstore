@@ -56,7 +56,7 @@ const OrderForm = (props) => {
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
-                <Form.Label>Request</Form.Label>
+                <Form.Label>Additional Notes</Form.Label>
                 <Form.Control as="textarea" rows="2"
                     value={rqst} onChange={handleRqst} />
             </Form.Group>

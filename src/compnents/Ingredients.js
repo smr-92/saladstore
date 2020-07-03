@@ -24,7 +24,7 @@ const Ingredients = (props) => {
                     )
                 })}
             </ul>
-            <Button className="proceed-btn" onClick={handleProceed}>PROCEED TO CHECKOUT</Button>
+            <Button className="proceed-btn" onClick={handleProceed}>Proceed to Checkout</Button>
         </Container>
     )
 }
