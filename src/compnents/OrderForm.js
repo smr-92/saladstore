@@ -37,7 +37,7 @@ const OrderForm = (props) => {
     return (
         <Form noValidate validated={validated} onSubmit={handleSubmit} className="order-form">
             <Form.Group >
-                <Form.Label>Email address</Form.Label>
+                <Form.Label>Email address*</Form.Label>
                 <Form.Control type="email" placeholder="Enter email"
                     required
                     value={email} onChange={handleEmail} />
@@ -47,7 +47,7 @@ const OrderForm = (props) => {
             </Form.Group>
 
             <Form.Group >
-                <Form.Label>Name</Form.Label>
+                <Form.Label>Name*</Form.Label>
                 <Form.Control type="text" placeholder="Name"
                     required
                     value={name} onChange={handleName} />
