@@ -4,12 +4,12 @@ import { useHistory } from 'react-router-dom';
 
 const Home = () => {
     const history = useHistory();
-    const handleClick = () =>{
+    const handleClick = () => {
         history.push('/ingredients')
     }
     return (
         <Container className="home-ctnr">
-            <br/>
+            <br />
             <Row>
                 <Col>
                     <h4>Welcome to salad store</h4>

@@ -40,8 +40,8 @@ const Cart = (props) => {
                         </Col>
                     </Row> :
                     <p>You didn't added any ingredients in your salad!</p>}
-                    <Row className="bck-btn">
-                <Button onClick={handleBack}>Back To Ingredients</Button>
+                <Row className="bck-btn">
+                    <Button onClick={handleBack}>Back To Ingredients</Button>
                 </Row>
             </Container>
             <ConfirmationModal handleCloseModal={handleCloseModal} />

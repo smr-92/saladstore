@@ -12,15 +12,15 @@ const OderDetails = (props) => {
     }
     return (
         <React.Fragment>
-            <ul style={{padding:"15px"}}>
+            <ul style={{ padding: "15px" }}>
                 {Object.keys(cartItems).map((item) => {
                     return (
-                        <div key={item} style={{padding: "0 15px"}}>
+                        <div key={item} style={{ padding: "0 15px" }}>
                             <Row>
                                 <h6>{item}</h6>
                             </Row>
                             <Row>
-                                <Col style={{padding:"0px"}}>
+                                <Col style={{ padding: "0px" }}>
                                     <p>{`Qnty: ${cartItems[item].quantity}`}</p>
                                 </Col>
                                 <Col>

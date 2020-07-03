@@ -5,11 +5,11 @@ import Home from './compnents/Home';
 import Ingredients from './compnents/Ingredients';
 import Cart from './compnents/Cart';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
-    
+
     <Container fluid={true} className="App">
       <Router>
         <Header />
@@ -20,7 +20,7 @@ function App() {
         </Switch>
       </Router>
     </Container>
-    
+
   );
 }
 

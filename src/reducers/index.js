@@ -1,5 +1,7 @@
-import { GETALLINGREDIENTS, ADD_INGREDIENT, ADD_QUANTITY, SUBTRACT_QUANTTY, DELETE_INGREDIENT, 
-    PLACE_ORDER, CLOSE_MODAL } from '../constants/ActionTypes';
+import {
+    GETALLINGREDIENTS, ADD_INGREDIENT, ADD_QUANTITY, SUBTRACT_QUANTTY, DELETE_INGREDIENT,
+    PLACE_ORDER, CLOSE_MODAL
+} from '../constants/ActionTypes';
 import { combineReducers } from 'redux';
 
 
@@ -18,15 +20,15 @@ const initialState = {
  * @constructor
  * @param {string} state - state of the data shape.
  * @param {string} action - action payload passed for data updates.
- */ 
+ */
 export const ingredientReducer = (state = initialState, action) => {
-	switch(action.type) {
+    switch (action.type) {
         case GETALLINGREDIENTS: {
             return {
-                ...state, 
-                ingredientList: action.payload 
+                ...state,
+                ingredientList: action.payload
             }
-        } 
+        }
         case ADD_INGREDIENT: {
             const { name, price } = action.payload
             return {
@@ -75,18 +77,18 @@ export const ingredientReducer = (state = initialState, action) => {
             }
         }
         case CLOSE_MODAL: {
-            return  initialState
+            return initialState
         }
         default: return state;
-	}
+    }
 }
 //.................................................................................................
 /**
  * set up with initial state.
  */
 const initialOrderState = {
-    orderDetails:{},
-    orderModal:false
+    orderDetails: {},
+    orderModal: false
 }
 
 //...................................................................
@@ -96,18 +98,18 @@ const initialOrderState = {
  * @constructor
  * @param {string} state - state of the data shape.
  * @param {string} action - action payload passed for data updates.
- */ 
+ */
 export const orderReducer = (state = initialOrderState, action) => {
-	switch(action.type) {
+    switch (action.type) {
         case PLACE_ORDER: {
             return {
-                ...state, 
+                ...state,
                 orderDetails: action.payload,
                 orderModal: true
             }
-        } 
+        }
         case CLOSE_MODAL: {
-            return  initialOrderState
+            return initialOrderState
         }
         default: return state;
     }
@@ -118,6 +120,6 @@ export const orderReducer = (state = initialOrderState, action) => {
  * combine multiple reducers into one.
  */
 export const reducers = combineReducers({
-    ingredientData:ingredientReducer,
-    orderData:orderReducer
+    ingredientData: ingredientReducer,
+    orderData: orderReducer
 })

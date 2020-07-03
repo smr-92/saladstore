@@ -20,10 +20,10 @@ const ConfirmationModal = (props) => {
                 <Modal.Title>{`Thank you for shopping with us`}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-               <Container>
-                   <p>Your order details</p>
-                    <OrderDetails/>
-               </Container>
+                <Container>
+                    <p>Your order details</p>
+                    <OrderDetails />
+                </Container>
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
@@ -34,7 +34,7 @@ const ConfirmationModal = (props) => {
     )
 }
 const mapStateToProps = state => ({
-    orderModal:state.orderData.orderModal,
-    orderDetails:state.orderData.orderDetails
+    orderModal: state.orderData.orderModal,
+    orderDetails: state.orderData.orderDetails
 })
 export default connect(mapStateToProps)(ConfirmationModal);

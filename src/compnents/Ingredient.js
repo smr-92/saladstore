@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Row, Col, Container } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import CustomButton from './CustomButton';
 import { addIngredient, addQuantity } from '../actions';
 import { connect } from 'react-redux';
@@ -14,7 +14,7 @@ const Ingredient = (props) => {
     }
 
     return (
-       
+
         <Col className="col-md-3 ingrdnt-col">
             <Row>
                 <Col>

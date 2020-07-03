@@ -1,21 +1,25 @@
 import { getIngredients } from '../mockApi';
-import { GETALLINGREDIENTS, ADD_INGREDIENT, ADD_QUANTITY, SUBTRACT_QUANTTY, DELETE_INGREDIENT, 
-    PLACE_ORDER, CLOSE_MODAL } from '../constants/ActionTypes';
+import {
+    GETALLINGREDIENTS, ADD_INGREDIENT, ADD_QUANTITY, SUBTRACT_QUANTTY, DELETE_INGREDIENT,
+    PLACE_ORDER, CLOSE_MODAL
+} from '../constants/ActionTypes';
 
 
 
 /**
  * all actions are defined here
+ * @constructor
+ * @param {string} param Pass param to update the payload
 **/
 export const getAllIngredient = () => {
     console.log("getcall")
     return (dispatch) => {
         const ingredients = getIngredients().ingredients
         dispatch({
-            type:GETALLINGREDIENTS,
-            payload:ingredients
+            type: GETALLINGREDIENTS,
+            payload: ingredients
         })
-        
+
     }
 }
 
@@ -46,5 +50,5 @@ export const placeOrder = (param) => ({
 
 
 export const closeModal = () => ({
-    type:CLOSE_MODAL
+    type: CLOSE_MODAL
 })

@@ -8,11 +8,11 @@ import { getAllIngredient, addIngredient } from '../actions';
 //this is the parent component for listing all ingredients
 
 const Ingredients = (props) => {
-    useEffect(()=>{props.getAllIngredient()});
+    useEffect(() => { props.getAllIngredient() });
 
     const history = useHistory();
 
-    const handleProceed = () =>{
+    const handleProceed = () => {
         history.push('/orderdetails')
     }
     return (
@@ -20,7 +20,7 @@ const Ingredients = (props) => {
             <ul className="ingredients-list">
                 {props.ingredientList.map((ingredient, indx) => {
                     return (
-                        <Ingredient ingredient={ingredient} key={ingredient.name}/>
+                        <Ingredient ingredient={ingredient} key={ingredient.name} />
                     )
                 })}
             </ul>
@@ -32,4 +32,4 @@ const Ingredients = (props) => {
 const mapStateToProps = state => ({
     ingredientList: state.ingredientData.ingredientList
 })
-export default connect(mapStateToProps, { addIngredient, getAllIngredient }) (Ingredients);
+export default connect(mapStateToProps, { addIngredient, getAllIngredient })(Ingredients);

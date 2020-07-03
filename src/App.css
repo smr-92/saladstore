@@ -1,70 +1,73 @@
-
-
 .App-header {
-  background-color: #282c34;
-  min-height: 15vh;
-  max-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 15vh;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
+
 .container-fluid {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
+
 .ingredients-list {
-  padding-inline-start: 0px;
+    padding-inline-start: 0px;
 }
 
 .stepperc-input {
-  display: flex;
-  display: -webkit-flex;
-  color: gray;
-  max-width: 120px;
-  margin:0px auto;
-  padding: 0px;
-  text-align: center;
-  width: 100%;
-}
-.increment, .decrement {
-  width: 27px;
-  border:1px solid #28a76f;
-  text-align: center;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 21px;
-  line-height: 17px;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  outline:none !important;
-}
-.quantity{
-  width:100%;
-  border:1px solid #28a745;
-  text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    color: gray;
+    max-width: 120px;
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
 }
 
-.proceed-btn{
-  float: right;
-  margin-right: 15px;
+.increment,
+.decrement {
+    width: 27px;
+    border: 1px solid #28a76f;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 17px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    outline: none !important;
+}
+
+.quantity {
+    width: 100%;
+    border: 1px solid #28a745;
+    text-align: center;
+}
+
+.proceed-btn {
+    float: right;
+    margin-right: 15px;
 }
 
 .total-ammount {
-  background: #28a745;
-  padding: 6px 15px;
-  font-size: 18px;
-  text-align: right;
-  position: absolute;
-  bottom: -8px;
-  width: 100%;
-  left: 0px;
+    background: #28a745;
+    padding: 6px 15px;
+    font-size: 18px;
+    text-align: right;
+    position: absolute;
+    bottom: -8px;
+    width: 100%;
+    left: 0px;
 }
 
 .order-form {
-  width: 90%;
+    width: 90%;
     margin: auto;
     justify-content: center;
     border: 1px solid #dadada;
@@ -72,40 +75,41 @@
 }
 
 .form-btn {
-  padding: 0px;
-  text-align: right;
+    padding: 0px;
+    text-align: right;
 }
 
 .bck-btn {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 .home-ctnr {
-  margin: auto;
-  text-align: center;
+    margin: auto;
+    text-align: center;
 }
 
 .ingrdnt-col {
-  width: fit-conten;
-  margin: 20px 10px;
-  justify-content: center;
-  text-align: center; 
-  border: solid grey;
-  display: inline-block;
-  flex: 0 0 23% !important;
-  max-width: 23% !important; 
-  padding: 15px 10px;
-  border-width: 1px; 
-  vertical-align: top;
+    width: fit-conten;
+    margin: 20px 10px;
+    justify-content: center;
+    text-align: center;
+    border: solid grey;
+    display: inline-block;
+    flex: 0 0 23% !important;
+    max-width: 23% !important;
+    padding: 15px 10px;
+    border-width: 1px;
+    vertical-align: top;
 }
 
-.odr-smry {   
-  margin-left: -15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.odr-smry {
+    margin-left: -15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .odrDtls-wrapper {
-  border: 1px solid #dadada;
-  padding:0px;
-  position:relative
+    border: 1px solid #dadada;
+    padding: 0px;
+    position: relative
 }
